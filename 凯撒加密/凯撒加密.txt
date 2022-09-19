@@ -1,0 +1,104 @@
+import java.util.*;
+
+public class Main
+{
+    
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("请输入秘钥：");
+        ArrayList<Character> key_arraylist = new ArrayList<>();
+        String key = in.nextLine();
+        int len_key = key.length();
+        for (int i = 0; i < len_key; ++ i)
+        {
+            key_arraylist.add(key.charAt(i));
+        }
+        key_arraylist.sort(new Comparator<Character>(){ // 对密钥字母排序
+            @Override
+            public int compare(Character o1, Character o2){
+                int num = 0;
+                if (o1 > o2) num = 1;
+                else if (o1 == o2) num = 0;
+                else num = -1;
+                return num;
+            }
+        });
+        // 构建哈希表 字母对应其顺序
+        HashMap<Character, Character> map = new HashMap<>();
+        for (int i = 0; i < len_key; ++ i)
+        {
+            map.put(key_arraylist.get(i), (char)(i + '0'));    
+            // System.out.println(key_arraylist.get(i) + " " + (char)(i + '0'));
+            
+        }
+        
+        // System.out.println(key_arraylist);
+        System.out.println("请输入明文：");
+        String [] tmp_text = in.nextLine().split(" ");
+        
+        String text = "";
+        for (int i = 0; i < tmp_text.length; ++ i)
+        {
+            text += tmp_text[i];
+        }
+        
+        // System.out.println(text + " " + text.length());
+        int row = (int)Math.ceil((double)text.length() / (double)len_key);  
+        int col = len_key;
+        char [][] matrix = new char [row + 100][col + 100];
+        int cnt = 0;
+        
+        // System.out.println(row);
+        for (int i = 1; i <= row; ++ i)
+        {
+            for (int j = 0; j < col; ++ j)
+            {
+                
+                if (cnt >= text.length()) matrix[i][j] = '*';
+                else matrix[i][j] = text.charAt(cnt);
+                cnt ++;
+            }
+        }
+        cnt = 0;
+        for(int i = 0; i < key.length(); ++ i)
+		{
+			matrix[0][cnt ++] = map.get(key.charAt(i));
+	
+		}	
+        // 测试代码 
+        // for (int i = 0; i <= row; ++ i)
+        // {
+        //     for (int j = 0; j < col; ++ j)
+        //     {
+        //         System.out.printf("%c", matrix[i][j]);
+            
+        //     }
+        //     System.out.println();
+        // }
+        
+        // 按照第一行构架哈希表
+        TreeMap<Character, String> treeMap = new TreeMap<>();
+        for (int i = 0; i < col; ++ i)
+        {
+            String tmp = "";
+            for (int j = 1; j <= row; ++ j)
+            {
+                tmp += matrix[j][i];
+            }
+            // System.out.println(tmp);
+            treeMap.put(matrix[0][i], tmp);
+        }
+        // System.out.print(treeMap.keySet());
+        String res = "";
+        for (Character i : treeMap.keySet()){
+            res += treeMap.get(i);
+        }
+        System.out.println("加密结果：");
+        for (int i = 0; i < res.length(); ++ i){
+            char t = res.charAt(i);
+            if (t != '*') System.out.print(t);
+        }
+    }
+}
