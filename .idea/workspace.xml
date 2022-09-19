@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd529244-cae6-4f76-83ff-cf585511dae5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2EydcNwzTaxkZnw3veXDsY5Djdn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MygitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gitcode" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jikelihua.mygit.MygitApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd529244-cae6-4f76-83ff-cf585511dae5" name="Default Changelist" comment="" />
+      <created>1663571836548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663571836548</updated>
+      <workItem from="1663571839265" duration="225000" />
+      <workItem from="1663572078346" duration="418000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="732" y="183" key="CommitChangelistDialog2" timestamp="1663572497395">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="732" y="183" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1663572497395" />
+    <state x="380" y="189" key="SettingsEditor" timestamp="1663572125141">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="380" y="189" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1663572125141" />
+  </component>
+</project>
